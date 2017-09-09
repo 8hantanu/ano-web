@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='https://www.w3.org/1999/xhtml' xmlns:b='https://www.google.com/2005/gml/b' xmlns:data='https://www.google.com/2005/gml/data' xmlns:expr='https://www.google.com/2005/gml/expr'>
 <head>
 
 <!-- [ Meta Tag SEO ] -->
@@ -98,15 +98,15 @@
 <meta content='xxxxx' name='twitter:creator'/>
 
 <!-- Latex -->
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js">
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js' type='text/javascript'>
 MathJax.Hub.Config({
- extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
- jax: ["input/TeX", "output/HTML-CSS"],
+ extensions: [&quot;tex2jax.js&quot;,&quot;TeX/AMSmath.js&quot;,&quot;TeX/AMSsymbols.js&quot;],
+ jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
  tex2jax: {
-     inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-     displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+     inlineMath: [ [&#39;$&#39;,&#39;$&#39;], [&quot;\\(&quot;,&quot;\\)&quot;] ],
+     displayMath: [ [&#39;$$&#39;,&#39;$$&#39;], [&quot;\\[&quot;,&quot;\\]&quot;] ],
  },
- "HTML-CSS": { availableFonts: ["TeX"] }
+ &quot;HTML-CSS&quot;: { availableFonts: [&quot;TeX&quot;] }
 });
 </script>
 
@@ -1339,29 +1339,33 @@ function bp_thumbnail_resize(e,a){var t=300,i=200;return image_tag='<img width="
 <li><a class='active' href='/'><span itemprop='name'><i class='fa fa-home'/> Home</span></a></li>
 <li><a href='/search/label/SK3TCH%20MACHiN3' itemprop='url'><span itemprop='name'>SK3TCH-MACHiN3</span></a>
 <ul>
-<li><a href='#' itemprop='url'><span itemprop='name'>Sitemap 1</span></a></li>
-<li><a href='#' itemprop='url'><span itemprop='name'>Sitemap 2</span></a></li>
-<li><a href='#' itemprop='url'><span itemprop='name'>Tag and Styling</span></a></li>
+<li><a href='#' itemprop='url'><span itemprop='name'>SK3TCH3S</span></a></li>
+<li><a href='#' itemprop='url'><span itemprop='name'>DOODL3S</span></a></li>
+<li><a href='#' itemprop='url'><span itemprop='name'>DOD</span></a></li>
 </ul>
 </li>
 <li><a href='/search/label/WiCK3D%20POiSON' itemprop='url'><span itemprop='name'>WiCK3D-POiSON</span></a>
 <ul>
-<li><a href='#' itemprop='url'><span itemprop='name'>Submenu 1</span></a></li>
-<li><a href='#' itemprop='url'><span itemprop='name'>Submenu 2</span></a></li>
-<li><a href='#' itemprop='url'><span itemprop='name'>Kota</span></a>
+<li><a href='#' itemprop='url'><span itemprop='name'>ALGOS</span></a></li>
+<li><a href='#' itemprop='url'><span itemprop='name'>HACKS</span></a></li>
+<li><a href='#' itemprop='url'><span itemprop='name'>PRODUCTS</span></a>
 <ul>
-<li><a href='#' itemprop='url'><span itemprop='name'>Jakarta</span></a></li>
-<li><a href='#' itemprop='url'><span itemprop='name'>Bandung</span></a></li>
-<li><a href='#' itemprop='url'><span itemprop='name'>Sukabumi</span></a></li>
-<li><a href='#' itemprop='url'><span itemprop='name'>Cianjur</span></a></li>
+<li><a href='#' itemprop='url'><span itemprop='name'>ANDROID</span></a></li>
+<li><a href='#' itemprop='url'><span itemprop='name'>W3B</span></a></li>
+<li><a href='#' itemprop='url'><span itemprop='name'>ARDUiNO</span></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href='/search/label/G3CKO%20TACO' itemprop='url'><span itemprop='name'>G3CKO-TACO</span></a>
 <ul>
-<li><a href='#' itemprop='url'><span itemprop='name'>Submenu 1</span></a></li>
-<li><a href='#' itemprop='url'><span itemprop='name'>Submenu 2</span></a></li>
+<li><a href='#' itemprop='url'><span itemprop='name'>SiCALM</span></a></li>
+<li><a href='#' itemprop='url'><span itemprop='name'>iD3AS</span></a></li>
+<ul>
+<li><a href='#' itemprop='url'><span itemprop='name'>TH3ORi3S</span></a></li>
+<li><a href='#' itemprop='url'><span itemprop='name'>MATH M3SS</span></a></li>
+<li><a href='#' itemprop='url'><span itemprop='name'>ARDUiNO</span></a></li>
+</ul>
 <li><a href='#' itemprop='url'><span itemprop='name'>Submenu 3</span></a>
 <ul>
 <li><a href='#' itemprop='url'><span itemprop='name'>Item 1</span></a></li>

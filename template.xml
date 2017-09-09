@@ -292,6 +292,14 @@ body#layout div#mag-wrapper:before,body#layout div#mag-wrapper2:before{content:'
 body#layout #viennabox-1,body#layout #viennabox-2,body#layout #viennabox-3,body#layout #viennabox-4,body#layout #viennabox-5,body#layout #viennabox-6{width:48%;margin:4px;float:left;display:list-item;list-style:none}
 ]]></b:template-skin>
 
+<style type="text/css">
+/* Hide ScrollBar */    
+body {
+    overflow:hidden;
+}
+</style>
+
+
 <style type='text/css'>
 /* CSS Fix */
 #navbar-iframe,#ContactForm1,#ContactForm1 br,.quickedit,#Attribution1 {display:none;visibility:hidden}
@@ -1202,7 +1210,7 @@ function bp_thumbnail_resize(e,a){var t=300,i=200;return image_tag='<img width="
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(window).load(function() {
-	$(".loader").fadeOut("slow");
+	$(".loader").fadeOut(1000);
 })
 </script>
 

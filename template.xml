@@ -1213,7 +1213,6 @@ $(window).load(function() {
 <!-- Loading Img-->
 <div class='loader'/>
 
-
 <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
 <div id='oopss'>
 <div id='error-text'>
@@ -2957,24 +2956,6 @@ window.onload = function () {
 <aside id='sidebar-wrapper' itemscope='itemscope' itemtype='https://schema.org/WPSideBar'>
 <div class='sidebar-inner'>
   <b:section class='sidebar-two section' id='sidebar-two' preferred='yes'>
-    <b:widget id='HTML3' locked='false' title='Flairs' type='HTML'>
-      <b:widget-settings>
-        <b:widget-setting name='content'>&lt;a href=&quot;https://stackexchange.com/users/8607331&quot;&gt;
-&lt;img src=&quot;https://stackexchange.com/users/flair/8607331.png?theme=clean&quot; width=&quot;208&quot; height=&quot;58&quot; alt=&quot;profile for WiCK3D POiSON on Stack Exchange, a network of free, community-driven Q&amp;amp;A sites&quot; title=&quot;profile for WiCK3D POiSON on Stack Exchange, a network of free, community-driven Q&amp;amp;A sites&quot; /&gt;
-&lt;/a&gt;</b:widget-setting>
-      </b:widget-settings>
-      <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-    </b:widget>
     <b:widget id='HTML14' locked='false' mobile='yes' title='Follow ANΩ' type='HTML' version='1'>
       <b:widget-settings>
         <b:widget-setting name='content'/>
@@ -3154,9 +3135,82 @@ window.onload = function () {
   </b:widget>
 </b:section>
 <b:section class='vita-list vita-list-3 section' id='vita-list-3' showaddelement='yes'>
-  <b:widget id='HTML4' locked='false' title='Comments' type='HTML' version='1'>
+  <b:widget id='Label1' locked='false' title='Labels' type='Label'>
     <b:widget-settings>
-      <b:widget-setting name='content'/>
+      <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+      <b:widget-setting name='display'>CLOUD</b:widget-setting>
+      <b:widget-setting name='selectedLabelsList'>ALL TAGS,G3CKO TACO,TOP PICKS</b:widget-setting>
+      <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+      <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2><data:title/></h2>
+  </b:if>
+  <div expr:class='&quot;widget-content &quot; + data:display + &quot;-label-widget-content&quot;'>
+    <b:if cond='data:display == &quot;list&quot;'>
+      <ul>
+        <b:loop values='data:labels' var='label'>
+          <li>
+            <b:if cond='data:blog.url == data:label.url'>
+              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+            <b:else/>
+              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+            </b:if>
+            <b:if cond='data:showFreqNumbers'>
+              <span dir='ltr'>(<data:label.count/>)</span>
+            </b:if>
+          </li>
+        </b:loop>
+      </ul>
+    <b:else/>
+      <b:loop values='data:labels' var='label'>
+        <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+          <b:if cond='data:blog.url == data:label.url'>
+            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+          <b:else/>
+            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+          </b:if>
+          <b:if cond='data:showFreqNumbers'>
+            <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+          </b:if>
+        </span>
+      </b:loop>
+    </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+  </b:widget>
+</b:section>
+</div>
+<div class='clear'/>
+<b:section class='sidebar section' id='sidebar' preferred='yes'>
+  <b:widget id='VideoBar1' locked='false' title='Youtube' type='VideoBar'>
+    <b:widget-settings>
+      <b:widget-setting name='expression'/>
+      <b:widget-setting name='popular_channels'>order:rating</b:widget-setting>
+      <b:widget-setting name='channels'>https://www.youtube.com/channel/UC1mZSwzaaVpOaD9izP1GEKA</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+
+  <div class='widget-content'>
+    <div expr:id='data:widget.instanceId + &quot;_bar&quot;'>
+      <span class='videoBar-status'>Loading...</span>
+    </div>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+  <b:widget id='HTML2' locked='false' title='Flairs' type='HTML'>
+    <b:widget-settings>
+      <b:widget-setting name='content'>&lt;a href=&quot;https://stackexchange.com/users/8607331&quot;&gt;
+&lt;img src=&quot;https://stackexchange.com/users/flair/8607331.png?theme=clean&quot; width=&quot;208&quot; height=&quot;58&quot; alt=&quot;profile for WiCK3D POiSON on Stack Exchange, a network of free, community-driven Q&amp;amp;A sites&quot; title=&quot;profile for WiCK3D POiSON on Stack Exchange, a network of free, community-driven Q&amp;amp;A sites&quot; /&gt;
+&lt;/a&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -3166,12 +3220,10 @@ window.onload = function () {
   <div class='widget-content'>
     <data:content/>
   </div>
+
+  <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
-</b:section>
-</div>
-<div class='clear'/>
-<b:section class='sidebar section' id='sidebar' preferred='yes'>
   <b:widget id='PopularPosts2' locked='false' title='Most Trending' type='PopularPosts' version='1'>
     <b:widget-settings>
       <b:widget-setting name='numItemsToShow'>4</b:widget-setting>
@@ -3245,6 +3297,54 @@ window.onload = function () {
 <div id='footer-adwidget'>
 <div class='footer-widget' id='footx1'>
 <b:section class='footer' id='footer1'>
+  <b:widget id='Image1' locked='false' title='' type='Image'>
+    <b:widget-settings>
+      <b:widget-setting name='displayUrl'>http://1.bp.blogspot.com/-ueO5Ps6yIWM/WfzEnyQTiHI/AAAAAAAASZs/NK2H75uwrGAxbtePPedllYXso-GkyAvzwCK4BGAYYCw/s241/final%2Blogo1%2Bwhite%2Bbg.jpg</b:widget-setting>
+      <b:widget-setting name='displayHeight'>241</b:widget-setting>
+      <b:widget-setting name='sectionWidth'>241</b:widget-setting>
+      <b:widget-setting name='shrinkToFit'>true</b:widget-setting>
+      <b:widget-setting name='displayWidth'>241</b:widget-setting>
+      <b:widget-setting name='link'>https://alphanixomega.blogspot.com</b:widget-setting>
+      <b:widget-setting name='caption'/>
+    </b:widget-settings>
+    <b:includable id='main'>
+    <b:if cond='data:title != &quot;&quot;'>
+      <h2><data:title/></h2>
+    </b:if>
+    <div class='widget-content'>
+      <b:tag cond='data:link' expr:href='data:link' name='a'>
+        <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_img&quot;' expr:src='data:sourceUrl' expr:width='data:width'/>
+      </b:tag>
+      <br/>
+      <b:if cond='data:caption'>
+        <span class='caption'><data:caption/></span>
+      </b:if>
+    </div>
+    <b:include name='quickedit'/>
+  </b:includable>
+  </b:widget>
+</b:section>
+</div>
+<div class='footer-widget' id='footx2'>
+<b:section class='footer' id='footer2'>
+  <b:widget id='HTML1' locked='false' title='About' type='HTML' version='1'>
+    <b:widget-settings>
+      <b:widget-setting name='content'/>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+</b:includable>
+  </b:widget>
+</b:section>
+</div>
+<div class='footer-widget' id='footx3'>
+<b:section class='footer' id='footer3'>
   <b:widget id='FollowByEmail1' locked='false' mobile='yes' title='Newsletter' type='FollowByEmail' version='1'>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'><h2 class='title'><data:title/></h2></b:if>
@@ -3270,59 +3370,11 @@ window.onload = function () {
   </b:widget>
 </b:section>
 </div>
-<div class='footer-widget' id='footx2'>
-<b:section class='footer' id='footer2'>
-  <b:widget id='Image1' locked='false' title='ALPHA NIX ΩM3GA' type='Image'>
-    <b:widget-settings>
-      <b:widget-setting name='displayUrl'>http://2.bp.blogspot.com/-QOAC3mJ-9-w/WbUa7jLUHLI/AAAAAAAAALU/ZN1fzi7p1HIbunh3mNCiUXZhPoxyCfAxQCK4BGAYYCw/s1600/final%2Blogo1.png</b:widget-setting>
-      <b:widget-setting name='displayHeight'>1600</b:widget-setting>
-      <b:widget-setting name='sectionWidth'>150</b:widget-setting>
-      <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
-      <b:widget-setting name='displayWidth'>1600</b:widget-setting>
-      <b:widget-setting name='link'>https://alphanixomega.blogspot.com</b:widget-setting>
-      <b:widget-setting name='caption'/>
-    </b:widget-settings>
-    <b:includable id='main'>
-    <b:if cond='data:title != &quot;&quot;'>
-      <h2><data:title/></h2>
-    </b:if>
-    <div class='widget-content'>
-      <b:tag cond='data:link' expr:href='data:link' name='a'>
-        <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_img&quot;' expr:src='data:sourceUrl' expr:width='data:width'/>
-      </b:tag>
-      <br/>
-      <b:if cond='data:caption'>
-        <span class='caption'><data:caption/></span>
-      </b:if>
-    </div>
-    <b:include name='quickedit'/>
-  </b:includable>
-  </b:widget>
-</b:section>
-</div>
-<div class='footer-widget' id='footx3'>
-<b:section class='footer' id='footer3'>
-  <b:widget id='HTML1' locked='false' title='About' type='HTML' version='1'>
-    <b:widget-settings>
-      <b:widget-setting name='content'/>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-</b:includable>
-  </b:widget>
-</b:section>
-</div>
 </div>
 </div>
 <div id='footer-last'>
 <div class='vileftcredit'>
-Copyright &#169; <span id='current-year'/> <a expr:href='data:blog.homepageUrl' itemprop='creator' itemscope='itemscope' itemtype='https://schema.org/Person'><span itemprop='name'><data:blog.title/></span></a> All Right Reserved
+Copyright &#169; <span id='current-year'/> <a expr:href='data:blog.homepageUrl' itemprop='creator' itemscope='itemscope' itemtype='https://schema.org/Person'><span itemprop='name'><data:blog.title/></span></a> | All Rights Reserved
 </div>
 <div id='virightcredit'>
 Based on Theme by  <a href='https://arlinadesign.blogspot.com' id='arlinacredit' rel='nofollow' target='_blank'>Arlina Design</a>

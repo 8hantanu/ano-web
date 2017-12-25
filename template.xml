@@ -724,10 +724,6 @@ div#FollowByEmail1{background:transparent;}
 .pagenav span,.pagenav a{padding:6px 11px;display:inline-block;background-color:#f6f6f6;color:#444;margin:0 2px;transition:all .6s}
 .pagenav .current,.pagenav a:hover{background:#F44336;color:#fff;}
 
-/* CSS Back To Top */
-#SmoothToTop{overflow:hidden;position:fixed;z-index:90;right:30px;bottom:30px;display:none;width:50px;height:50px;color:#fff;text-align:center;background-color:#262626;font-size:24px;line-height:48px;cursor:pointer;-webkit-transform:translateZ(0);border-radius:2px;transition:all .5s}
-#SmoothToTop:hover {background-color:#F44336;color:#fff;}
-
 /* CSS Global Responsive */
 @media screen and (max-width:1066px) {
 #outer-wrapper {margin:0 auto;}
@@ -808,7 +804,6 @@ a.virightcredit-social {margin:10px 5px 0 5px;}
 #header-wrapper{padding:0;margin:20px auto;}
 #header {min-width:initial;background:none;margin:20px auto;padding:0 5px;}
 #header .description {font-size:100%;line-height:1.5;}
-#SmoothToTop {font-size:20px;}
 #footer-wrapper{margin:20px 0 0 0;}
 .responsive-menu {margin:0;}
 #nav {margin:0;}
@@ -922,7 +917,7 @@ body{padding:0}
 .post {background:#fff;margin:0 0 15px;padding:15px;border:none;}
 h1.post-title {border-bottom:none;}
 .post blockquote{background:transparent;color:#666;border:none;}
-.viennatop-wrapper,#nav,.share-post,#SmoothToTop,#search,.breadcrumbs,.halaman,#blog-pager,.banner,#banner,.banner2,#banner2,#sidebar-wrapper,#virelated-post,#comments,#footer-wrapper,#header-wrapper,div#banner,div#banner2,.vienna-mainmenu{opacity:0;display:none;visibility:hidden;width:0;height:0;}
+.viennatop-wrapper,#nav,.share-post,#search,.breadcrumbs,.halaman,#blog-pager,.banner,#banner,.banner2,#banner2,#sidebar-wrapper,#virelated-post,#comments,#footer-wrapper,#header-wrapper,div#banner,div#banner2,.vienna-mainmenu{opacity:0;display:none;visibility:hidden;width:0;height:0;}
 .status-msg-border{border:none;}}
 </style>
 </b:if>
@@ -1102,7 +1097,7 @@ body{padding:0}
 #post-wrapper{width:100%;margin:0 auto;}
 .post {background:#fff;margin:0 0 15px;padding:15px;}
 .post blockquote{background:transparent;color:#666;border:none;}
-nav,.share-post,#SmoothToTop,#search,.breadcrumbs,.halaman,#blog-pager,#menu-wrap,.banner,#banner,#sidebar-wrapper,#subs-and-redat,#comments,#footer-wrapper,#header-wrapper,div#banner{display:none;visibility:hidden;width:0;height:0;}}
+nav,.share-post,#search,.breadcrumbs,.halaman,#blog-pager,#menu-wrap,.banner,#banner,#sidebar-wrapper,#subs-and-redat,#comments,#footer-wrapper,#header-wrapper,div#banner{display:none;visibility:hidden;width:0;height:0;}}
 </style>
 </b:if>
 
@@ -3384,7 +3379,6 @@ Based on Theme by  <a href='https://arlinadesign.blogspot.com' id='arlinacredit'
 </div>
 <div class='clear'/>
 
-<a href='#' id='SmoothToTop'><i class='fa fa-angle-double-up'/></a>
 <b:if cond='data:blog.pageType != &quot;index&quot;'>
 <script type='text/javascript'>
 //Pager
@@ -3396,8 +3390,6 @@ $(document).ready(function(){$(&quot;#flippy&quot;).click(function(){$(&quot;#fl
 <script type='text/javascript'>
 // Current year
 function getCurrentYear(){var e=new Date;return e.getFullYear()}el=document.getElementById(&quot;current-year&quot;),el.innerHTML=getCurrentYear();
-// Back to top
-jQuery(document).ready(function(e){var t=e(&quot;#SmoothToTop&quot;);e(window).scroll(function(){e(this).scrollTop()&gt;=1200?t.show(10).animate({opacity:&quot;1&quot;},10):t.animate({opacity:&quot;0&quot;},10)});t.click(function(t){t.preventDefault();e(&quot;html,body&quot;).animate({scrollTop:0},400)})})
 //<![CDATA[
 // Menu Top
 $(document).ready(function(){var str=location.href.toLowerCase();$('.top-menunav ul li a').each(function(){if(str.indexOf(this.href.toLowerCase())>-1){$("li.highlight").removeClass("highlight");$(this).parent().addClass("highlight")}})})

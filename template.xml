@@ -1205,7 +1205,7 @@ $(window).load(function() {
 </head>
 <body>
 
-<!-- Loading Img-->
+<!-- Loading Img (Remove to edit template in blogger) -->
 <div class='loader'/>
 
 <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
@@ -2682,14 +2682,7 @@ $(document).ready(function(){$(".pl").click(function(){$("#share-menu").slideTog
         </b:if>
     <b:else/>
 <div id='threaded-comment-form'>
-      <p><data:blogCommentMessage/>
-<span class='small-button1'>
-<span id='show-emo'><a class='emo-button' href='javascript:void(0)' onclick='document.getElementById(&apos;emo-box&apos;).style.display=&apos;inline-block&apos;;document.getElementById(&apos;hide-emo&apos;).style.display=&apos;inline-block&apos;;document.getElementById(&apos;show-emo&apos;).style.display=&apos;none&apos;' title='Show Emoticon'>Emoticon</a></span><span id='hide-emo'><a class='emo-button' href='javascript:void(0)' onclick='document.getElementById(&apos;emo-box&apos;).style.display=&apos;none&apos;;document.getElementById(&apos;hide-emo&apos;).style.display=&apos;none&apos;;document.getElementById(&apos;show-emo&apos;).style.display=&apos;inline-block&apos;' title='Hide Emoticon'>Emoticon</a></span>
-</span>
-  </p>
-<div id='emo-box'>
-  <div class='comment_emo_list'/>
-</div>
+
       <data:blogTeamBlogMessage/>
 
         <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
@@ -2951,6 +2944,52 @@ window.onload = function () {
 <aside id='sidebar-wrapper' itemscope='itemscope' itemtype='https://schema.org/WPSideBar'>
 <div class='sidebar-inner'>
   <b:section class='sidebar-two section' id='sidebar-two' preferred='yes'>
+    <b:widget id='HTML3' locked='false' mobile='yes' title='Disqus' type='HTML'>
+        <b:includable id='main'>
+              <script type='text/javascript'>
+                  var disqus_shortname = &#39;alphanixomega&#39;;
+                  var disqus_blogger_current_url = &quot;<data:blog.canonicalUrl/>&quot;;
+
+                  if (!disqus_blogger_current_url.length) {
+                      disqus_blogger_current_url = &quot;<data:blog.url/>&quot;;
+                  }
+
+                  var disqus_blogger_homepage_url = &quot;<data:blog.homepageUrl/>&quot;;
+                  var disqus_blogger_canonical_homepage_url = &quot;<data:blog.canonicalHomepageUrl/>&quot;;
+              </script>
+
+              <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                  <style type='text/css'>
+                      #comments {display:none;}
+                  </style>
+
+                  <script type='text/javascript'>
+                      (function() {
+                          var bloggerjs = document.createElement(&#39;script&#39;);
+                          bloggerjs.type = &#39;text/javascript&#39;;
+                          bloggerjs.async = true;
+                          bloggerjs.src = &#39;//&#39;+disqus_shortname+&#39;.disqus.com/blogger_item.js&#39;;
+                          (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(bloggerjs);
+                      })();
+
+                  </script>
+              </b:if>
+                  <style type='text/css'>
+                      .post-comment-link { visibility: hidden; }
+                  </style>
+
+                  <script type='text/javascript'>
+                  (function() {
+                      var bloggerjs = document.createElement(&#39;script&#39;);
+                      bloggerjs.type = &#39;text/javascript&#39;;
+                      bloggerjs.async = true;
+                      bloggerjs.src = &#39;//&#39;+disqus_shortname+&#39;.disqus.com/blogger_index.js&#39;;
+                      (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(bloggerjs);
+                  })();
+
+              </script>
+  </b:includable>
+    </b:widget>
     <b:widget id='HTML14' locked='false' mobile='yes' title='Follow ANΩ' type='HTML' version='1'>
       <b:widget-settings>
         <b:widget-setting name='content'/>

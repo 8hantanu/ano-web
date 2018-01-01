@@ -1423,7 +1423,7 @@ document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/ALL%20TAGS?max
        <b:if cond='data:title != &quot;&quot;'>
        <b:if cond='data:title != &quot;&quot;'>
          <script>
-           document.write(&#39;&lt;div class=&quot;recent-post-title&quot;&gt;&lt;h2&gt;&lt;span&gt;&lt;a href=&quot;/search/label/<data:content/>TOP%20PICKS&quot;&gt;<data:title/>&lt;/a&gt;&lt;/h2&gt;&lt;/span&gt;&lt;/div&gt;&#39;);
+           document.write(&#39;&lt;div class=&quot;recent-post-title&quot;&gt;&lt;h2&gt;&lt;span&gt;&lt;a href=&quot;/search/label/<data:content/>xTOP&quot;&gt;<data:title/>&lt;/a&gt;&lt;/h2&gt;&lt;/span&gt;&lt;/div&gt;&#39;);
          </script>
 </b:if>
 </b:if>
@@ -1438,7 +1438,7 @@ document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/ALL%20TAGS?max
 <div class='content'>
 <ul>
 <script>
-document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/TOP%20PICKS<data:content/>?max-results=&quot;+numposts5+&quot;&amp;orderby=published&amp;alt=json-in-script&amp;callback=recentarticles1\&quot;&gt;&lt;\/script&gt;&quot;);
+document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/xTOP<data:content/>?max-results=&quot;+numposts5+&quot;&amp;orderby=published&amp;alt=json-in-script&amp;callback=recentarticles1\&quot;&gt;&lt;\/script&gt;&quot;);
 </script>
 </ul>
 <div class='clear'/>
